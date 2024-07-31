@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nettracking Frontend Task</title>
+
+    <meta property="og:title" content="Nettracking Web by Somor Mk" />
+    <meta property="og:description" content="Nettracking is a content marketing solution that tracks the effectiveness of your blog design and developed by SOMOR Mk" />
+    <meta property="og:image" content="/images/thumbnail.png" />
+
+    <!-- Slider Plugin CSS -->
+    <link rel="stylesheet" href="plugins/slider/slick.css">
+    <link rel="stylesheet" href="plugins/slider/slider.css">
+
+    <!-- NavTabs Plugin CSS -->
+    <link rel="stylesheet" href="plugins/nav_tab/navtab.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Fonntawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    maxWidth: {
+                        container: '1300px',
+                    },
+                    colors: {
+                        siteBg: '#12141D',
+                        peraOne: '#87888D',
+                        peraTwo: '#696B76',
+                        hoverOne: '#FF664F',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-siteBg font-inter overflow-x-hidden">
+
+    <!-- Navbar Part Start -->
+    <nav class="py-[22px] text-white sticky top-0 left-0 w-full bg-siteBg z-[999]">
+        <div class="max-w-container px-5 mx-auto">
+            <div class="flex justify-between items-center">
+
+                <div class="w-full flex justify-between items-center gap-x-[100px]">
+                    <div>
+                        <a href="#">
+                            <img src="/images/logo.png" alt="LOGO">
+                        </a>
+                    </div>
+
+                    <div id="navButton" class="lg:hidden"><img src="images/bars.png" alt="" class="cursor-pointer">
+                    </div>
+
+                    <div id="navArea"
+                        class="fixed top-0 right-[-100%] w-[80%] lg:w-full h-screen bg-[#12141D] pt-20 px-[calc(15%)] lg:px-0 lg:pt-0 lg:bg-transparent lg:static lg:h-auto lg:flex justify-between items-center duration-300">
+
+                        <span id="navCross" class="absolute right-5 top-5 lg:hidden cursor-pointer"><i
+                                class="fa-solid fa-circle-xmark text-2xl text-white"></i></span>
+
+                        <ul class="flex flex-col text-right lg:text-left lg:flex-row gap-x-[34px] gap-y-3">
+                            <li>
+                                <span id="featuresBtn"
+                                    class="text-peraOne md:text-white text-[13px] font-medium md:hover:text-white duration-300">Features</span>
+                            </li>
+                            <li>
+                                <span id="pricingBtn"
+                                    class="text-peraOne text-[13px] font-medium md:hover:text-white duration-300">Pricing</span>
+                            </li>
+                            <li>
+                                <span id="worksBtn"
+                                    class="text-peraOne text-[13px] font-medium md:hover:text-white duration-300">How it
+                                    works</span>
+                            </li>
+                            <li>
+                                <a id="knowledgeBtn" href="#"
+                                    class="text-peraOne text-[13px] font-medium md:hover:text-white duration-300">Knowledge
+                                    base</a>
+                            </li>
+                            <li>
+                                <span id="faqBtn"
+                                    class="text-peraOne text-[13px] font-medium md:hover:text-white duration-300">FAQ</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-[50px] lg:mt-0">
+                            <ul class="flex flex-col lg:flex-row gap-x-[18px] gap-y-5">
+                                <li>
+                                    <a href="#"
+                                        class="w-full text-center lg:w-auto inline-block px-4 py-[10px] bg-[#1D1F29] rounded-lg text-white text-[13px] font-semibold hover:bg-white hover:text-black duration-300">Sign
+                                        in</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="w-full text-center lg:w-auto inline-block px-4 py-[10px] bg-white rounded-lg text-black text-[13px] font-semibold border border-transparent hover:bg-[#1D1F29] hover:text-white hover:border-white duration-300">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Part End -->
+
+    <!-- Banner Part Start -->
+    <section class="pt-[60px] pb-[30px] md:pb-[54px]">
+        <div class="max-w-container mx-auto px-5 text-center">
+
+            <div class="flex flex-col items-center gap-y-10">
+                <div>
+                    <h1 class="text-[26px] md:text-[42px] text-white font-bold mb-5">Content marketing solution & <br>
+                        idea of your
+                        business
+                    </h1>
+                    <p class="text-xs md:text-xl text-peraOne">Nettracking is a content marketing solution that <br>
+                        tracks the effectiveness of your blog,</p>
+                </div>
+
+                <div>
+                    <ul class="flex gap-x-[10px] md:gap-x-4">
+                        <li>
+                            <a href="#"
+                                class="px-[10px] md:px-[30px] py-[7px] md:py-4 rounded-sm md:rounded-lg text-white text-[9px] md:text-sm font-semibold bg-hoverOne hover:text-white duration-300">Explore
+                                Platform</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="px-[10px] md:px-[30px] py-[7px] md:py-4 rounded-sm md:rounded-lg text-white text-[9px] md:text-sm font-semibold bg-[#1D1F29] hover:text-white duration-300">Learn
+                                More</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Banner Part End -->
+
+    <!-- Features Part Start -->
+    <section id="features" class="pt-[30px] md:pt-[54px] mb-10 md:mb-20">
+        <div class="max-w-container mx-auto md:px-5 text-center">
+
+            <div class="px-5 md:px-0">
+                <h2 class="text-[26px] md:text-[42px] text-white font-bold mb-5">Key features</h2>
+                <p class="text-xs md:text-xl text-peraOne">NetTracking™ has quickly become the go-to content
+                    marketing <br class="hidden md:block">
+                    solution for over 600 clients around the world</p>
+            </div>
+
+            <div
+                class="mt-10 md:mt-[100px] w-full bg-[#1E2029] py-10 px-5 sm:py-20 sm:px-[100px] rounded-md md:rounded-2xl">
+                <ul class="flex flex-wrap gap-x-[15px] lg:gap-x-[100px] gap-y-5 sm:gap-y-[100px] justify-between">
+
+                    <li class="w-[46%] lg:w-[24%] text-left">
+                        <span>
+                            <img src="/images/features-icons/icon-1.png" alt=""
+                                class="w-full max-w-[40px] md:max-w-[60px]">
+                        </span>
+                        <h6 class="text-base text-white font-semibold mb-[10px] mt-3 md:text-xl md:mt-[26px]">Real-Time
+                            Email
+                            Alerts</h6>
+                        <p class="text-xs md:text-base text-peraTwo">NetTracking" is a very powerful Web 2.0 site search
+                            engine
+                            allows you to find email allerts</p>
+                    </li>
+
+                    <li class="w-[46%] lg:w-[24%] text-left">
+                        <span>
+                            <img src="/images/features-icons/icon-2.png" alt=""
+                                class="w-full max-w-[40px] md:max-w-[60px]">
+                        </span>
+                        <h6 class="text-base text-white font-semibold mb-[10px] mt-3 md:text-xl md:mt-[26px]">Monitor
+                            Inbound
+                            Traffic</h6>
+                        <p class="text-xs md:text-base text-peraTwo">The biggest challenge for marketers is being heard
+                            inbound
+                            traffice in market.</p>
+                    </li>
+
+                    <li class="w-[46%] lg:w-[24%] text-left">
+                        <span>
+                            <img src="/images/features-icons/icon-3.png" alt=""
+                                class="w-full max-w-[40px] md:max-w-[60px]">
+                        </span>
+                        <h6 class="text-base text-white font-semibold mb-[10px] mt-3 md:text-xl md:mt-[26px]">Track
+                            Multiple Sites
+                        </h6>
+                        <p class="text-xs md:text-base text-peraTwo">Nettracking gives you an innovative web-based tool
+                            that
+                            manages multiple sites</p>
+                    </li>
+
+                    <li class="w-[46%] lg:w-[24%] text-left">
+                        <span>
+                            <img src="/images/features-icons/icon-4.png" alt=""
+                                class="w-full max-w-[40px] md:max-w-[60px]">
+                        </span>
+                        <h6 class="text-base text-white font-semibold mb-[10px] mt-3 md:text-xl md:mt-[26px]">Aggregate
+                            Statistics
+                        </h6>
+                        <p class="text-xs md:text-base text-peraTwo">filters and reports on your website's search engine
+                            ranking
+                            results.</p>
+                    </li>
+
+                    <li class="w-[46%] lg:w-[24%] text-left">
+                        <span>
+                            <img src="/images/features-icons/icon-5.png" alt=""
+                                class="w-full max-w-[40px] md:max-w-[60px]">
+                        </span>
+                        <h6 class="text-base text-white font-semibold mb-[10px] mt-3 md:text-xl md:mt-[26px]">Edit
+                            Exclude</h6>
+                        <p class="text-xs md:text-base text-peraTwo">In short, nettracking gives you the information
+                            that allows
+                            you to changes in your website's ranking.</p>
+                    </li>
+
+                    <li class="w-[46%] lg:w-[24%] text-left">
+                        <span>
+                            <img src="/images/features-icons/icon-6.png" alt=""
+                                class="w-full max-w-[40px] md:max-w-[60px]">
+                        </span>
+                        <h6 class="text-base text-white font-semibold mb-[10px] mt-3 md:text-xl md:mt-[26px]">Easy To
+                            Implement
+                        </h6>
+                        <p class="text-xs md:text-base text-peraTwo">accurately track organic (or natural) search engine
+                            movement
+                            over time.</p>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <!-- Features Part End -->
+
+    <!-- What We Do Part Start -->
+    <section class="pb-20 md:pb-24">
+        <div class="max-w-container mx-auto px-5 text-center">
+
+            <div class="mb-10 md:mb-[84px]">
+                <h2 class="text-[26px] md:text-[42px] text-white font-bold mb-5">Creative solutions to expand <br
+                        class="hidden md:block"> your business!</h2>
+                <p class="text-xs md:text-xl text-peraOne">Nettracking is designed with an integrated tracking
+                    system that <br class="hidden md:block"> allows customers to track their package</p>
+            </div>
+
+            <div class="flex flex-col xl:flex-row gap-x-5 gap-y-5">
+
+                <div
+                    class="w-full xl:w-1/2 bg-[#1E2029] py-[30px] px-[20px] md:py-10 md:px-[50px] rounded-2xl flex flex-col">
+
+                    <!-- Tab links -->
+                    <div id="tabs" class="flex gap-x-[7px] md:gap-x-5 mb-[30px] md:mb-10">
+                        <div class="tab text-[8px] md:text-sm text-white font-semibold py-[7px] px-[10px] md:py-3 md:px-4 bg-[#2A2C34] rounded cursor-pointer"
+                            data-tab="tab1">Founder</div>
+                        <div class="tab text-[8px] md:text-sm text-white font-semibold py-[7px] px-[10px] md:py-3 md:px-4 bg-[#2A2C34] rounded cursor-pointer"
+                            data-tab="tab2">Blogger</div>
+                        <div class="tab text-[8px] md:text-sm text-white font-semibold py-[7px] px-[10px] md:py-3 md:px-4 bg-[#2A2C34] rounded cursor-pointer"
+                            data-tab="tab3">Marketer</div>
+                        <div class="tab text-[8px] md:text-sm text-white font-semibold py-[7px] px-[10px] md:py-3 md:px-4 bg-[#2A2C34] rounded cursor-pointer"
+                            data-tab="tab4">Agency</div>
+                    </div>
+
+                    <!-- Tab content -->
+                    <div id="tab-contents" class="text-left h-full flex flex-col justify-center">
+
+                        <div id="tab1" class="tab-content hidden">
+                            <h3 class="text-lg md:text-[36px] leading-[140%] text-white font-semibold mb-4">Track the
+                                results of your work</h3>
+                            <p class="text-[10px] md:text-base text-peraTwo">The tracking system sends customers
+                                notifications on
+                                shipping date status, shipping notification, delivery confirmation, package delivered
+                                with time and date, etc.</p>
+                            <div class="mt-10">
+                                <a href="#"
+                                    class="px-[10px] md:px-[30px] py-[7px] md:py-4 rounded-sm md:rounded-lg text-white text-[9px] md:text-sm font-semibold bg-hoverOne hover:text-white inline-block duration-300">Explore
+                                    Platform</a>
+                            </div>
+                        </div>
+
+                        <div id="tab2" class="tab-content hidden">
+                            <h3 class="text-lg md:text-[36px] leading-[140%] text-white font-semibold mb-4">Blogger</h3>
+                            <p class="text-[10px] md:text-base text-peraTwo">The tracking system sends customers
+                                notifications on
+                                shipping date status, shipping notification, delivery confirmation, package delivered
+                                with time and date, etc.</p>
+                            <div class="mt-10">
+                                <a href="#"
+                                    class="px-[10px] md:px-[30px] py-[7px] md:py-4 rounded-sm md:rounded-lg text-white text-[9px] md:text-sm font-semibold bg-hoverOne hover:text-white inline-block duration-300">Explore
+                                    Platform</a>
+                            </div>
+                        </div>
+
+                        <div id="tab3" class="tab-content hidden">
+                            <h3 class="text-lg md:text-[36px] leading-[140%] text-white font-semibold mb-4">Marketer
+                            </h3>
+                            <p class="text-[10px] md:text-base text-peraTwo">The tracking system sends customers
+                                notifications on
+                                shipping date status, shipping notification, delivery confirmation, package delivered
+                                with time and date, etc.</p>
+                            <div class="mt-10">
+                                <a href="#"
+                                    class="px-[10px] md:px-[30px] py-[7px] md:py-4 rounded-sm md:rounded-lg text-white text-[9px] md:text-sm font-semibold bg-hoverOne hover:text-white inline-block duration-300">Explore
+                                    Platform</a>
+                            </div>
+                        </div>
+
+                        <div id="tab4" class="tab-content hidden">
+                            <h3 class="text-lg md:text-[36px] leading-[140%] text-white font-semibold mb-4">Agency</h3>
+                            <p class="text-[10px] md:text-base text-peraTwo">The tracking system sends customers
+                                notifications on
+                                shipping date status, shipping notification, delivery confirmation, package delivered
+                                with time and date, etc.</p>
+                            <div class="mt-10">
+                                <a href="#"
+                                    class="px-[10px] md:px-[30px] py-[7px] md:py-4 rounded-sm md:rounded-lg text-white text-[9px] md:text-sm font-semibold bg-hoverOne hover:text-white inline-block duration-300">Explore
+                                    Platform</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="w-full xl:w-1/2 rounded-2xl">
+                    <div class="service_slider">
+                        <img src="images/services/service-1.png" alt="Service Image" class="w-full max-w-full">
+                        <img src="images/services/service-1.png" alt="Service Image" class="w-full max-w-full">
+                        <img src="images/services/service-1.png" alt="Service Image" class="w-full max-w-full">
+                        <img src="images/services/service-1.png" alt="Service Image" class="w-full max-w-full">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- What We Do Part End -->
+
+    <!-- How It Works Part Start -->
+    <section id="works" class="mb-10">
+        <div class="max-w-container mx-auto md:px-5 text-center">
+            <div class="mb-10 md:mb-[84px]">
+                <h2 class="text-[26px] md:text-[42px] text-white font-bold mb-5">How it works</h2>
+            </div>
+
+            <div class="w-full bg-[#1E2029] py-10 md:py-[70px] px-7 md:px-[120px] rounded-md md:rounded-2xl">
+                <div class="w-full flex flex-col gap-y-5 md:gap-y-12 relative">
+
+                    <div
+                        class="absolute top-0 left-0 md:top-[50%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%] flex flex-col gap-y-[210px] md:gap-y-[200px] z-[1]">
+                        <div
+                            class="w-[40px] h-[40px] leading-[40px] md:w-[60px] md:h-[60px] md:leading-[60px] text-center rounded-full border-2 bg-[#2D2F37] border-[#3d3f47] text-xs md:text-xl text-white font-semibold">
+                            01</div>
+                        <div
+                            class="w-[40px] h-[40px] leading-[40px] md:w-[60px] md:h-[60px] md:leading-[60px] text-center rounded-full border-2 bg-[#2D2F37] border-[#3d3f47] text-xs md:text-xl text-white font-semibold">
+                            02</div>
+                        <div
+                            class="w-[40px] h-[40px] leading-[40px] md:w-[60px] md:h-[60px] md:leading-[60px] text-center rounded-full border-2 bg-[#2D2F37] border-[#3d3f47] text-xs md:text-xl text-white font-semibold">
+                            03</div>
+                        <span
+                            class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] w-1 h-[95%] border border-[#3d3f47] z-[-1]"></span>
+                    </div>
+
+                    <div class="w-full flex flex-col md:flex-row md:justify-between items-end md:items-center">
+                        <div class="w-[80%] md:w-[40%]">
+                            <img src="/images/works-cards/card-1.png" alt="" class="w-full max-w-full rounded-2xl">
+                        </div>
+                        <div class="w-[80%] md:w-[40%] text-left mt-[14px] md:mt-0">
+                            <h3 class="text-lg md:text-3xl text-white font-semibold mb-[10px] md:mb-4">Add Website</h3>
+                            <p class="text-xs md:text-base text-peraTwo">Nettracking gives you an innovative web-based
+                                tool that
+                                manages, filters and reports on your website's</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex flex-col md:flex-row md:justify-between items-end md:items-center">
+                        <div class="w-[80%] md:w-[40%] text-left mt-[14px] md:mt-0 order-2 md:order-1 text-right">
+                            <h3 class="text-lg md:text-3xl text-white font-semibold mb-[10px] md:mb-4">Get Tracking Code
+                            </h3>
+                            <p class="text-xs md:text-base text-peraTwo">filters and reports on your website's search
+                                engine
+                                ranking results. In short, nettracking gives you the information</p>
+                        </div>
+                        <div class="w-[80%] md:w-[40%] order-1 md:order-2">
+                            <img src="/images/works-cards/card-2.png" alt="" class="w-full max-w-full rounded-2xl">
+                        </div>
+                    </div>
+
+                    <div class="w-full flex flex-col md:flex-row md:justify-between items-end md:items-center">
+                        <div class="w-[80%] md:w-[40%]">
+                            <img src="/images/works-cards/card-3.png" alt="" class="w-full max-w-full rounded-2xl">
+                        </div>
+                        <div class="w-[80%] md:w-[40%] text-left mt-[14px] md:mt-0">
+                            <h3 class="text-lg md:text-3xl text-white font-semibold mb-[10px] md:mb-4">Start Tracking
+                            </h3>
+                            <p class="text-xs md:text-base text-peraTwo">in your website's ranking position and
+                                accurately track
+                                organic (or natural) search engine movement over time.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- How it works Part End -->
+
+    <!-- Pricing Plan Part Start -->
+    <section id="pricing" class="mt-10 mb-20">
+        <div class="max-w-container mx-auto px-5 text-center">
+
+            <div class="mb-10 md:mb-[84px]">
+                <h2 class="text-[26px] md:text-[42px] text-white font-bold mb-5">Our pricing plan</h2>
+                <p class="text-xs md:text-xl text-peraOne">Online sales tracker that tracks the success of your
+                    online sales efforts.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-x-[25px] gap-y-5 text-left">
+
+                <div class="w-full md:w-1/3 p-10 bg-[#1E2029] rounded-lg">
+                    <h6 class="text-xl text-white font-medium mb-5">Free</h6>
+                    <h3 class="text-[34px] text-white font-bold mb-10">$00 <span
+                            class="text-[#8C8F93] text-base font-medium ml-[5px]">3 month trial</span></h3>
+
+                    <ul class="flex flex-col gap-y-4">
+                        <li class="text-sm md:text-lg text-[#606266] font-medium"><i
+                                class="fa-solid fa-check text-green-500 mr-3"></i> B2B marketing</li>
+                        <li class="text-sm md:text-lg text-[#606266] font-medium"><i
+                                class="fa-solid fa-check text-green-500 mr-3"></i> Cloud-based solution</li>
+                        <li class="text-sm md:text-lg text-[#606266] font-medium"><i
+                                class="fa-solid fa-check text-green-500 mr-3"></i> Marketing strategies</li>
+                        <li class="text-sm md:text-lg text-[#606266] font-medium"><i
+                                class="fa-solid fa-check text-green-500 mr-3"></i> Automated follow up</li>
+                    </ul>
+
+                    <div class="mt-[54px]">
+                        <a href="#"
+                            class="w-[157px] h-[48px] leading-[48px] text-center bg-[#04AA69] inline-block rounded-lg text-white text-base font-medium hover:opacity-80">Start
+                            free trial</a>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/3 p-10 bg-[#1E2029] rounded-lg">
+                    <h6 class="text-xl text-white font-medium mb-5">Basic</h6>
+                    <h3 class="text-[34px] text-white font-bold mb-10">$29 <span
+                            class="text-[#8C8F93] text-base font-medium ml-[5px]">3 month trial</span></h3>
+
+                    <ul class="flex flex-col gap-y-4">
+                        <li class="text-sm md:text-lg text-[#606266] font-medium"><i
+                                class="fa-solid fa-check text-[#FF7661] mr-3"></i> B2B marketing</li>
+                        <li class="text-sm md:text-lg text-[#606266] font-medium"><i
+                                class="fa-solid fa-check text-[#FF7661] mr-3"></i> Cloud-based solution</li>
+                        <li class="text-sm md:text-lg text-[#606266] font-medium"><i
+                                class="fa-solid fa-check text-[#FF7661] mr-3"></i> Marketing strategies</li>
+                        <li class="text-sm md:text-lg text-[#606266] font-medium"><i
+                                class="fa-solid fa-check text-[#FF7661] mr-3"></i> Automated follow up</li>
+                    </ul>
+
+                    <div class="mt-[54px]">
+                        <a href="#"
+                            class="w-[157px] h-[48px] leading-[48px] text-center bg-[#FF7661] inline-block rounded-lg text-white text-base font-medium hover:opacity-80">Get
+                            Started</a>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/3 p-10 bg-[#1E2029] rounded-lg">
+                    <h6 class="text-xl text-white font-medium mb-5">Permium</h6>
+                    <h3 class="text-[34px] text-white font-bold mb-10">$99 <span
+                            class="text-[#8C8F93] text-base font-medium ml-[5px]">3 month trial</span></h3>
+
+                    <ul class="flex flex-col gap-y-4">
+                        <li class="text-sm md:text-lg text-[#606266] font-medium"><i
+                                class="fa-solid fa-check text-[#855AFF] mr-3"></i> B2B marketing</li>
+                        <li class="text-sm md:text-lg text-[#606266] font-medium"><i
+                                class="fa-solid fa-check text-[#855AFF] mr-3"></i> Cloud-based solution</li>
+                        <li class="text-sm md:text-lg text-[#606266] font-medium"><i
+                                class="fa-solid fa-check text-[#855AFF] mr-3"></i> Marketing strategies</li>
+                        <li class="text-sm md:text-lg text-[#606266] font-medium"><i
+                                class="fa-solid fa-check text-[#855AFF] mr-3"></i> Automated follow up</li>
+                    </ul>
+
+                    <div class="mt-[54px]">
+                        <a href="#"
+                            class="w-[157px] h-[48px] leading-[48px] text-center bg-[#855AFF] inline-block rounded-lg text-white text-base font-medium hover:opacity-80">Get
+                            Started</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Pricing Plan Part End -->
+
+    <!-- Testimonials Part Start -->
+    <section class="mb-20">
+        <div class="max-w-container mx-auto px-5 text-center">
+
+            <div class="mb-10 md:mb-[84px]">
+                <h2 class="text-[26px] md:text-[42px] text-white font-bold mb-5">Testimonials</h2>
+                <p class="text-xs md:text-xl text-peraOne">Nettracking is a B2B marketing software for
+                    telecommunications industry.</p>
+            </div>
+
+            <div class="testimonial_slider pb-[50px]">
+
+                <div
+                    class="w-full px-5 py-5 sm:px-[30px] sm:pt-[38px] sm:pb-7 bg-transparent border-2 border-[#313339] text-left rounded-xl mx-[10px] sm:mx-[15px] relative">
+                    <div>
+                        <img src="images/testimonial/user-1.png" alt="" class="w-full max-w-10 sm:max-w-[70px]">
+                    </div>
+                    <p
+                        class="text-xs md:text-base text-peraTwo leading-[22px] sm:leading-[30px] mt-4 mb-5 sm:mt-[26px] sm:mb-[30px]">
+                        Nettracking is a B2B marketing
+                        software for telecommunications industry. This realtime cloud-based solution tracks your leads
+                        and works on many</p>
+                    <div>
+                        <h4 class="text-base sm:text-lg text-[#CACACA] font-bold mb-1">John Smith</h4>
+                        <h6 class="text-[10px] sm:text-xs text-peraTwo font-medium">UIHUT Company</h6>
+                    </div>
+                    <div class="absolute w-[67px] top-5 right-5"><img src="images/icon.png" alt=""
+                            class="w-full max-w-full"></div>
+                </div>
+
+                <div
+                    class="w-full px-5 py-5 sm:px-[30px] sm:pt-[38px] sm:pb-7 bg-transparent border-2 border-[#313339] text-left rounded-xl mx-[10px] sm:mx-[15px] relative">
+                    <div>
+                        <img src="images/testimonial/user-2.png" alt="" class="w-full max-w-10 sm:max-w-[70px]">
+                    </div>
+                    <p
+                        class="text-xs md:text-base text-peraTwo leading-[22px] sm:leading-[30px] mt-4 mb-5 sm:mt-[26px] sm:mb-[30px]">
+                        Customer feedback from the
+                        system is help for refining customer segmentation as well as positioning of brands. Need to see
+                        your leads as the real people</p>
+                    <div>
+                        <h4 class="text-base sm:text-lg text-[#CACACA] font-bold mb-1">Mansur</h4>
+                        <h6 class="text-[10px] sm:text-xs text-peraTwo font-medium">UIHUT Company</h6>
+                    </div>
+                    <div class="absolute w-[67px] top-5 right-5"><img src="images/icon.png" alt=""
+                            class="w-full max-w-full"></div>
+                </div>
+
+                <div
+                    class="w-full px-5 py-5 sm:px-[30px] sm:pt-[38px] sm:pb-7 bg-transparent border-2 border-[#313339] text-left rounded-xl mx-[10px] sm:mx-[15px] relative">
+                    <div>
+                        <img src="images/testimonial/user-3.png" alt="" class="w-full max-w-10 sm:max-w-[70px]">
+                    </div>
+                    <p
+                        class="text-xs md:text-base text-peraTwo leading-[22px] sm:leading-[30px] mt-4 mb-5 sm:mt-[26px] sm:mb-[30px]">
+                        Nettracking was founded in 1995
+                        to assist companies with improving their internet marketing performance. Our team of
+                        award-winning internet</p>
+                    <div>
+                        <h4 class="text-base sm:text-lg text-[#CACACA] font-bold mb-1">Sajib Smith</h4>
+                        <h6 class="text-[10px] sm:text-xs text-peraTwo font-medium">UIHUT Company</h6>
+                    </div>
+                    <div class="absolute w-[67px] top-5 right-5"><img src="images/icon.png" alt=""
+                            class="w-full max-w-full"></div>
+                </div>
+
+                <div
+                    class="w-full px-5 py-5 sm:px-[30px] sm:pt-[38px] sm:pb-7 bg-transparent border-2 border-[#313339] text-left rounded-xl mx-[10px] sm:mx-[15px] relative">
+                    <div>
+                        <img src="images/testimonial/user-2.png" alt="" class="w-full max-w-10 sm:max-w-[70px]">
+                    </div>
+                    <p
+                        class="text-xs md:text-base text-peraTwo leading-[22px] sm:leading-[30px] mt-4 mb-5 sm:mt-[26px] sm:mb-[30px]">
+                        Nettracking is a B2B marketing
+                        software for telecommunications industry. This realtime cloud-based solution tracks your leads
+                        and works on many</p>
+                    <div>
+                        <h4 class="text-base sm:text-lg text-[#CACACA] font-bold mb-1">John Smith</h4>
+                        <h6 class="text-[10px] sm:text-xs text-peraTwo font-medium">UIHUT Company</h6>
+                    </div>
+                    <div class="absolute w-[67px] top-5 right-5"><img src="images/icon.png" alt=""
+                            class="w-full max-w-full"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Testimonials Part End -->
+
+    <!-- FAQ Part Start -->
+    <section id="faq" class="mb-10 md:mb-20">
+        <div class="max-w-container mx-auto md:px-5 text-center">
+
+            <div class="md:mb-[84px] px-5 md:px-0">
+                <h2 class="text-[26px] md:text-[42px] text-white font-bold mb-5">FAQ</h2>
+                <p class="text-xs md:text-xl text-peraOne">Measure marketing and PR effectiveness. Find out which</p>
+            </div>
+
+            <div
+                class="w-full md:bg-[#1E2029] py-[65px] md:px-[180px] rounded-2xl flex flex-col gap-y-3 md:gap-y-[18px]">
+
+                <div class="p-5 md:p-6 flex gap-x-3 md:gap-x-6 bg-[#272932] md:rounded-lg">
+                    <div>
+                        <div
+                            class="w-[34px] h-[34px] leading-[34px] md:w-[50px] md:h-[50px] md:leading-[50px] rounded-full border-2 border-[#3E4047] bg-[#2D2F37] text-xs md:text-lg text-[#9A9BA1] font-semibold">
+                            01</div>
+                    </div>
+                    <div class="text-left">
+                        <h5 class="text-lg text-white font-semibold">What is nettracking</h5>
+                        <p class="text-xs md:text-base text-peraTwo mt-2">"NetTracking" is a very powerful Web 2.0 site
+                            search
+                            engine allows you to find</p>
+                    </div>
+                </div>
+
+                <div class="p-5 md:p-6 flex gap-x-3 md:gap-x-6 bg-[#272932] md:rounded-lg">
+                    <div>
+                        <div
+                            class="w-[34px] h-[34px] leading-[34px] md:w-[50px] md:h-[50px] md:leading-[50px] rounded-full border-2 border-[#3E4047] bg-[#2D2F37] text-xs md:text-lg text-[#9A9BA1] font-semibold">
+                            02</div>
+                    </div>
+                    <div class="text-left">
+                        <h5 class="text-lg text-white font-semibold">Pacage tracking available?</h5>
+                        <p class="text-xs md:text-base text-peraTwo mt-2">Nettracking is designed with an integrated
+                            tracking
+                            system that allows customers
+                            to track their package</p>
+                    </div>
+                </div>
+
+                <div class="p-5 md:p-6 flex gap-x-3 md:gap-x-6 bg-[#272932] md:rounded-lg">
+                    <div>
+                        <div
+                            class="w-[34px] h-[34px] leading-[34px] md:w-[50px] md:h-[50px] md:leading-[50px] rounded-full border-2 border-[#3E4047] bg-[#2D2F37] text-xs md:text-lg text-[#9A9BA1] font-semibold">
+                            03</div>
+                    </div>
+                    <div class="text-left">
+                        <h5 class="text-lg text-white font-semibold">What is the best solution in this platform</h5>
+                        <p class="text-xs md:text-base text-peraTwo mt-2">Nettracking is a content marketing solution
+                            that tracks
+                            the effectiveness of your blog,
+                            social network,</p>
+                    </div>
+                </div>
+
+                <div class="p-5 md:p-6 flex gap-x-3 md:gap-x-6 bg-[#272932] md:rounded-lg">
+                    <div>
+                        <div
+                            class="w-[34px] h-[34px] leading-[34px] md:w-[50px] md:h-[50px] md:leading-[50px] rounded-full border-2 border-[#3E4047] bg-[#2D2F37] text-xs md:text-lg text-[#9A9BA1] font-semibold">
+                            04</div>
+                    </div>
+                    <div class="text-left">
+                        <h5 class="text-lg text-white font-semibold">Marketing friendly?</h5>
+                        <p class="text-xs md:text-base text-peraTwo mt-2">video and email marketing efforts. By
+                            converting your
+                            customers into tracking </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- FAQ Part End -->
+
+    <!-- Footer Part Start -->
+    <footer class="pt-10 md:pt-[110px] pb-10">
+        <div class="max-w-container mx-auto px-5">
+            <div class="flex flex-wrap">
+
+                <div class="w-full md:w-[40%] mb-10 md:mb-0">
+                    <div class="w-[70%] md:w-[60%]">
+                        <div>
+                            <a href="#">
+                                <img src="/images/logo.png" alt="LOGO">
+                            </a>
+                        </div>
+                        <p class="text-sm text-peraTwo mt-3">We saw our customers confusing us with some of the other
+                            companies intheindustry</p>
+                        <ul class="flex gap-x-4 mt-5">
+                            <li><a href="#"><i
+                                        class="fa-brands fa-square-facebook text-[#434550] text-xl hover:text-white duration-300"></i></a>
+                            </li>
+                            <li><a href="#"><i
+                                        class="fa-brands fa-twitter text-[#434550] text-xl hover:text-white duration-300"></i></a>
+                            </li>
+                            <li><a href="#"><i
+                                        class="fa-brands fa-linkedin-in text-[#434550] text-xl hover:text-white duration-300"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-[60%] gap-y-10 flex flex-wrap">
+                    <div class="w-1/2 md:w-1/3">
+                        <h5 class="text-base text-white font-medium mb-6">Product</h5>
+                        <ul class="flex flex-col gap-y-[13px]">
+                            <li><a class="text-base text-peraTwo hover:text-white duration-300" href="#">Product</a>
+                            </li>
+                            <li><a class="text-base text-peraTwo hover:text-white duration-300" href="#">Fearures</a>
+                            </li>
+                            <li><a class="text-base text-peraTwo hover:text-white duration-300" href="#">Pricing</a>
+                            </li>
+                            <li><a class="text-base text-peraTwo hover:text-white duration-300" href="#">Case
+                                    Studies</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-1/2 md:w-1/3">
+                        <h5 class="text-base text-white font-medium mb-6">Service</h5>
+                        <ul class="flex flex-col gap-y-[13px]">
+                            <li><a class="text-base text-peraTwo hover:text-white duration-300" href="#">Blog</a></li>
+                            <li><a class="text-base text-peraTwo hover:text-white duration-300" href="#">Road Map</a>
+                            </li>
+                            <li><a class="text-base text-peraTwo hover:text-white duration-300"
+                                    href="#">Testimonials</a></li>
+                            <li><a class="text-base text-peraTwo hover:text-white duration-300" href="#">Good Tear</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-1/3">
+                        <h5 class="text-base text-white font-medium mb-6">Solutions</h5>
+                        <ul class="flex flex-col gap-y-3">
+                            <li><a class="text-base text-peraTwo hover:text-white duration-300" href="#">Process
+                                    Management</a></li>
+                            <li><a class="text-base text-peraTwo hover:text-white duration-300" href="#">Request
+                                    Management</a></li>
+                            <li><a class="text-base text-peraTwo hover:text-white duration-300" href="#">Workflow
+                                    Management</a></li>
+                            <li><a class="text-base text-peraTwo hover:text-white duration-300" href="#">Finance</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Part End -->
+
+    <!-- Copyright Section Part Start -->
+    <section class="py-[18px] bg-[#1E2029] text-center">
+        <p class="text-xs text-[#5A5C68]">&copy; Copyright 2024 by <a href="#"
+                class="hover:text-white duration-300">Codelabs</a> Digital. All right reserved.</p>
+    </section>
+    <!-- Copyright Section Part End -->
+
+
+    <!-- Slider Plugin JS -->
+    <script src="plugins/slider/jquery-3.6.0.min.js"></script>
+    <script src="plugins/slider/slick.min.js"></script>
+
+    <!-- NavTabs Plugin JS -->
+    <script src="plugins/nav_tab/navtab.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
